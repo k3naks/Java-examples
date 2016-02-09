@@ -15,6 +15,7 @@ public class Main {
         List<BaseEntity> list = (new ConcreteImpl()).createAndAddToList(new ChildEntity());
         add(list);
         print(list);
+        // testing branch
         /*Testing t = new Testing(1);
         int threadNumber = 10;
         Thread[] threadArr  =  new Thread[threadNumber];
