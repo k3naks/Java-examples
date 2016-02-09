@@ -12,7 +12,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        List<BaseEntity> list = (new GenericClass<>()).createAndAddToList(new ChildEntity());
+        List<BaseEntity> list = (new ConcreteImpl()).createAndAddToList(new ChildEntity());
         add(list);
         print(list);
         /*Testing t = new Testing(1);
