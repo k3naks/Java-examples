@@ -1,7 +1,4 @@
-import generics.BaseEntity;
-import generics.ChildEntity;
-import generics.ConcreteImpl;
-import generics.GenericClass;
+import generics.*;
 import threads.Task;
 import threads.Testing;
 
@@ -27,6 +24,20 @@ public class Main {
             threadArr[i].start();
         }*/
 
+        int a = 3;
+
+        testAnonymus(new BaseInterface() {
+            @Override
+            public void test() {
+                System.out.println(a);
+            }
+
+            @Override
+            public void test(int i) {
+
+            }
+        });
+
     }
 
     public static void print(List<? extends BaseEntity> list) {
@@ -37,5 +48,9 @@ public class Main {
 
     public static void add(List<? super ChildEntity> list) {
         list.add(new ChildEntity());
+    }
+
+    public static final void testAnonymus(BaseInterface baseInterface) {
+        baseInterface.test();
     }
 }
